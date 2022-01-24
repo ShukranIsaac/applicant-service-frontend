@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Applicant Tracking Service" />
+    <title>Jobs | ATS</title>
+    
+    <!-- custom styles -->
+
+    <!-- internal -->
+    <!-- <script src="./index.js" type="text/javascript" charset="utf-8"></script> -->
+    <script>
+        const init = (...rest) => {
+            console.log(rest)
+            const [p1, p2, p3, ...params] = rest 
+            console.log(p1)
+            console.log(p2)
+            console.log(p3)
+            console.log(params)       
+        }
+        init(2, 4, 5,"john", 10, 100)
+    </script>
+</head>
+
+<body>
+    <p>My site first</p>
+</body>
+
+</html>

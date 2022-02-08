@@ -1,0 +1,30 @@
+{
+  "name": "applicant-service-frontend",
+  "version": "1.0.0",
+  "description": "An applicant tracking system (ATS) is software used to help manage and automate hiring and recruitment practices for an organization by providing a centralized location to manage job postings, filter job applications, sort through resumes, and identify strong candidates for open positions. ATS software often uses artificial intelligence (AI) and natural language processing to score and sort resumes based on how well they align with job requirements. Candidates that pass through ATS filters are then matched with recruiters or hiring managers to move to the next steps in the hiring process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShukranIsaac/applicant-service-frontend.git"
+  },
+  "keywords": [
+    "ATS",
+    "AI",
+    "Job",
+    "Search",
+    "Applicant"
+  ],
+  "author": "ShukranIsaac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShukranIsaac/applicant-service-frontend/issues"
+  },
+  "homepage": "https://github.com/ShukranIsaac/applicant-service-frontend#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "react": "^17.0.2"
+  }
+}

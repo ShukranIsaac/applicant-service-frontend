@@ -82,7 +82,7 @@ const fetch = () => {
     }
 
     // opening the connection
-    xhttp.open('GET', `http://localhost:8000/api/careers`, true);
+    xhttp.open('GET', `http://localhost:8080/users`, true);
     // sending the request
     xhttp.send();
 

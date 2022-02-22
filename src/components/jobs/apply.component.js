@@ -9,13 +9,27 @@ const Apply = () => {
     const handleJobChange = e => {
         const name = e.target.name
         const value = e.target.value
-        setJob({ ...job, [name]: value })
+        // job ={
+        //     name:"",
+        //     company: "",
+        //     description:"",
+        //     roles: "",
+        //     tags: ""
+        // }
+        setJob({ ...job, [name]: value }) 
     }
 
     const handleSubmit = async e => {
         e.preventDefault()
 
-        // modify the job object tags to be an array of
+        // modify the job object tags property to be an array of
+        // job ={
+        //     name:"",
+        //     company: "",
+        //     description:"",
+        //     roles: "",
+        //     tags: [ { name: "" } ]
+        // }
         Object.assign(job, { tags: [{ name: job.tags }] })
 
         await fetch("http://localhost:8080/v1/users/II4a31D3z2s/job-listings", {

@@ -4,14 +4,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Apply from './components/jobs/apply.component';
 import JobListing from './components/jobs/list.jobs';
+import UserList from './components/users';
 
-function App() {
+function App({ ...props }) {
     return (
-        <div class="container mt-2">
+        <div className="container mt-2">
             <Router>
                 <Routes>
-                    <Route path="/" element={<JobListing />} />
-                    <Route path="/apply" element={<Apply />} />
+                    <Route exact path="/" element={<JobListing />} />
+                    <Route exact path="/apply" element={<Apply />} />
+                    <Route exact path="/users" element={<UserList /> } />
+                    <Route exact path="/users/:uid" element={<UserList {...props} />} />
                 </Routes>
             </Router>
         </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const Job = ({ job }) => {
-    // const { job } = props;
+const JobItem = (props) => {
+    const { job } = props;
 
     return (<div className="card bg-light flex w-60 list-group-item flex-fill align-items-center">
         <div className="flex d-flex justify-content-between">
@@ -15,13 +15,13 @@ const Job = ({ job }) => {
         <a href="./employer-details.html" className="flex d-flex justify-content-center">University of Malawi</a>
         <p className="flex d-flex text-muted justify-content-center">Chirunga Road, Box 280, Zomba</p>
         <p className="paragraph flex d-flex flex-wrap justify-content-center">
-            <b>Job Title:</b>{ job?.name }</p>
+            <b>Job Title:</b>{ job.name }</p>
         <p className="paragraph flex d-flex flex-wrap justify-content-center">
-            <b>Job Description:</b>{ job?.description }
+            <b>Job Description:</b>{ job.description }
         </p>
         <Link type="button" to="/apply"
             className="btn btn-primary flex d-flex justify-content-center">Apply</Link>
-    </div>);
+    </div>)
 }
 
-export default Job;
+export default JobItem;

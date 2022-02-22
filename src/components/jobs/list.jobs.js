@@ -1,35 +1,19 @@
-import React from 'react';
-import Job from './job.component';
+import React, { useState, useEffect } from 'react'
+import JobItem from './job.component'
 
-export class JobListing extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            jobs: []
-        }
-    }
+export const JobListing = () => {
+    const [jobs, setJobs] = useState([])
 
-    componentDidMount() {
-        fetch("http://localhost:8080/v1/users/YiieW1xVVxI/job-listings")
+    useEffect(() => {
+        fetch("http://localhost:8080/v1/users/II4a31D3z2s/job-listings", { method: 'GET' })
             .then(response => response.json())
-            .then(response => {
-                // console.log(response)
-                this.setState({ jobs: response.content })
-            })
+            .then(response => setJobs(response.content))
             .catch(err => console.log(err))
-    }
+    }, [])
 
-    render() {
-        const { jobs } = this.state
-
-        return (<div className="card-columns">
-            {
-                jobs.map(job => {
-                    return <Job key={job.uid} job={job} />
-                })
-            }
-        </div>)
-    }
+    return (<div className="card-columns">
+        { jobs.map((job, index) => <JobItem key={index} job={job} />) }
+    </div>)
 }
 
 export default JobListing

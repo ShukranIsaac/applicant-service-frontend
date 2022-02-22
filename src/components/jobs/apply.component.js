@@ -9,6 +9,7 @@ const Apply = () => {
     const handleJobChange = e => {
         const name = e.target.name
         const value = e.target.value
+        // line 20 builds the job object as the user types values in form input fields below
         // job ={
         //     name:"",
         //     company: "",
@@ -22,7 +23,8 @@ const Apply = () => {
     const handleSubmit = async e => {
         e.preventDefault()
 
-        // modify the job object tags property to be an array of
+        // modify the job object tags property to be an array as specified in the api, 
+        //     check documentation - swagger how to create a job listing
         // job ={
         //     name:"",
         //     company: "",
